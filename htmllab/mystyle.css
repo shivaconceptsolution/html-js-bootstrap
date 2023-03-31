@@ -1,0 +1,33 @@
+*
+{
+    margin: 0px;;
+}
+header
+{
+    height: 100px;
+    background-color: brown !important;
+}
+section
+{
+    height: 500px;
+    background-color: chartreuse;
+}
+footer
+{
+    height: 100px;
+    background-color: brown;
+}
+#logo
+{
+    float:left;
+    height:80%;
+    border: 1px solid red;
+    width:40%;
+}
+#nav
+{
+  float:right;
+  height: 80%;
+  border: 1px solid blue;
+  width:59%;
+}

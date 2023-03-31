@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0px;
+        }
+        #nav
+        {
+          height: 130px;
+           width:100%;
+           background-color: yellow;
+           position:fixed;
+        }
+        #nav li
+        {
+            display: inline-block;
+            margin-left: 20px;
+            position: relative;
+        }
+       
+        #nav ul li a
+        {
+            display:block;
+            padding:0px;
+            width:120px;
+            height: 30px;
+            padding-top: 3px;
+            background-color: brown;
+            color:white;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+        #nav li a:hover
+        {
+            background-color:red;
+        }
+        #nav ul li ul li a
+        {
+            width:200px;
+            background-color: green;
+            border-radius: 10px;
+            margin-top: 5px;
+            margin-left: -15px;
+            padding: 0px;
+            line-height: 20px;
+        }
+        #nav ul li ul 
+        {
+            display: none;
+            position:absolute;
+            padding:0;
+        }
+        #nav li:hover ul
+        {
+            display:block;
+        }
+        #content
+        {
+            height: 200px;
+            top: 130px;
+            position: relative;
+            border:1px solid red;
+            background-color: blue;;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+      <ul>
+        <li>
+           <a href="">Home</a> 
+        </li>
+        <li><a href="">About us</a> 
+            <ul><li> <a href="">Our Mission</a></li> <li> <a href="">Our Vision</a></li> </ul>
+        </li>
+        <li><a href="">Services </a></li>
+        <li><a href="">Gallery </a></li>
+        <li><a href="">Contact us </a></li>
+      </ul>
+
+    </div>
+
+    <div id="content">
+        <h1>Part1</h1>
+     <p>s gdjsdg hdsg hsadg hsagd jhsg dhjsg dhjs gdg sd shs dhsgdhjsghdgs <datagrid>sdhg shdg hdsg</datagrid></p>
+    </div>
+    <div id="content">
+        <h1>Part2</h1>
+        <p>s gdjsdg hdsg hsadg hsagd jhsg dhjsg dhjs gdg sd shs dhsgdhjsghdgs <datagrid>sdhg shdg hdsg</datagrid></p>
+       </div>
+       <div id="content">
+        <h1>Part3</h1>
+        <p>s gdjsdg hdsg hsadg hsagd jhsg dhjsg dhjs gdg sd shs dhsgdhjsghdgs <datagrid>sdhg shdg hdsg</datagrid></p>
+       </div>
+</body>
+</html>

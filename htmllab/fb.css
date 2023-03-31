@@ -1,0 +1,97 @@
+body{
+    background-color: #F0F2F5;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.part1
+{
+   width:50%;
+   float:left;
+   height:600px;
+  
+}
+.logo
+{
+    width: 301px;
+    height: 106px;
+    margin-top: 150px;
+    margin-left: 100px;;
+}
+.content
+{
+    margin-top: -35px;
+    font-size: 24px;
+    margin-left: 130px;;
+}
+.part2
+{
+    width:49%;
+    height:600px;
+ 
+   float:left; 
+}
+.main
+{
+    margin-top: 140px;
+    height: 350px;
+    width:400px;
+    border-radius: 2px;
+    background-color:white;
+    margin-left: 50px;;
+}
+.row
+{
+    padding-top:15px;
+    padding-left: 20px;
+    
+
+}
+
+.row input[type="text"]
+{
+    width:350px;
+    height: 40px;
+    border:1px solid #DDDFE2;
+    border-radius: 5px;
+}
+
+.row input[type="button"]
+{
+    width:350px;
+    height: 50px;
+    background-color: #1877f2;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    border:1px solid #1877f2;
+    border-radius: 5px;
+}
+.row a
+{
+    margin-left: 100px;
+    color:#1877f2;
+    font-weight: 500;
+    text-decoration: none;
+}
+.space
+{
+    margin-top: 5px;
+    height: 10px;
+}
+.rowhigh input[type="button"]
+{
+    margin-left: 100px;
+    margin-top: 12px;
+    height: 50px;
+    width:230px;
+    font-size: 18px;
+    background-color:#36A420;
+    border:1px solid #36A420;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.formbt
+{
+    margin-left: 90px;
+}
