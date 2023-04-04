@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeCourse()
+        {
+            var courses = document.getElementsByName("chk");
+           // alert(courses.length);
+            var data ="";
+            for(var i=0;i<courses.length;i++)
+            {
+                if(courses[i].checked)
+                {
+                       data = data + courses[i].value + " ";
+                }
+            }
+            alert(data);
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="chk" value="C" >C <br><br>
+    <input type="checkbox" name="chk" value="C++"  >C++ <br><br>
+    <input type="checkbox" name="chk" value="DS"  >DS <br><br>
+    <input type="checkbox" name="chk" value="MERN"  >MERN <br><br>
+    <input type="checkbox" name="chk" value="MEAN"  >MEAN <br><br>
+    <input type="button" name="btn" value="Click" onclick="changeCourse()" />
+</body>
+</html>

@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-       var a=10;
-       var b=20;
-       var temp;
-       temp=a;
-       a=b;
-       b=temp;
-       document.write("a=" + a + "b=" +b);
-
+        function swap()
+        {
+         var a=document.getElementById("txtnum1").value;
+         var b=document.getElementById("txtnum2").value;
+         var temp=a;
+         a=b;
+         b=temp;
+         alert('After Swapping value of a= '+a + " b="+b);
+        }
     </script>
 </head>
 <body>
-    
+    <input type="text" placeholder="Enter First Number" id="txtnum1" />
+    <br><br>
+    <input type="text" placeholder="Enter Second Number" id="txtnum2" />
+    <br><br>
+    <input type="button" value="click" onclick="swap()" />
 </body>
 </html>
