@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      var s = "";
+      var ope="";
+      var num1="";
+      var num2="";
+      let enterKey= document.getElementById("txtcal"); // source
+      document.addEventListener("keydown", (e) =>{
+          if(e.key == "Enter"){
+             alert("Enter Key is Pressed");
+             document.getElementById("btneql").click(); //destination
+             }
+          });
+ 
+  
+      function setValue(a)
+      {
+            if(a=="+" || a=='-')
+            {
+               ope=a;
+               num1 = s;
+               s="";
+               document.getElementById("txtcal").value=s;
+            }
+            else if(a=="=")
+            {
+                num2 = s;
+                s="";
+                if(ope=="+")
+                {
+                    s = parseInt(num1)+parseInt(num2);
+                }
+                else if(ope=='-')
+                {
+                    s = parseInt(num1)-parseInt(num2); 
+                }
+                document.getElementById("txtcal").value=s;
+            }
+            else
+            {
+                s = s+a;
+                document.getElementById("txtcal").value=s;
+            }
+      }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtcal" />
+    <br><br>
+    <input type="button" value="1" onclick="setValue(this.value)" /> <input type="button" value="2"  onclick="setValue(this.value)" />
+    <br><br>
+    <input type="button" value="+"  onclick="setValue(this.value)" />
+    <input type="button" value="-"  onclick="setValue(this.value)" /> 
+    <input type="button" id="btneql" value="=" onclick="setValue(this.value)" />
+</body>
+</html>
