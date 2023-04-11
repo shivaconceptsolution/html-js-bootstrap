@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var gen='';
+        function setGen(data)
+        {
+           gen=data;
+        }
+        function showdata()
+        {
+            var sal = parseInt(document.getElementById("txtsal").value);
+            var gender = gen;
+              if(sal>10000 && gender=="Female")
+                {
+                    sal = sal+500 + 300;
+                }
+                else if(sal>10000 && gender=="Male")
+                {
+                    sal = sal+500;
+                }
+                 else if(gender=="Female")
+                {
+                    sal = sal+300 + 300;
+                }
+                else
+                {
+                    sal = sal+300;
+                }
+            
+            alert("salary is "+ sal);
+        }
+    </script>
+</head>
+<body>
+      <input type="radio" name="gender" id="gen" value="Male" onchange="setGen(this.value)" />Male
+      <br><br>
+      <input type="radio" name="gender" id="gen" value="Female" onchange="setGen(this.value)"/>Female
+      <br><br>
+      <input type="text" id="txtsal" placeholder="Enter Salary"  />
+      <br><br>
+      <input type="button" value="Calculate" onclick="showdata()" />
+</body>
+</html>

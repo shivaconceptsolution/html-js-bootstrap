@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateLogin()
+        {
+            var txtuser = document.getElementById("txtuser").value;
+            var txtpass = document.getElementById("txtpass").value;
+            if(txtuser==="admin" && txtpass==="12345")
+            {
+                alert("Login Successfully");
+            }
+            else
+            {
+                alert("Invalid userid and password");
+            }
+                
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtuser" placeholder="Enter username" />
+    <br>
+    <input type="password" id="txtpass" placeholder="Enter password" />
+    <br>
+    <input type="button" value="Login" onclick="validateLogin()" />
+</body>
+</html>
