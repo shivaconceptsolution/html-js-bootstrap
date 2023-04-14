@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function calctable()
+     {
+        var num = document.getElementById("txtnum").value;
+        var i=1;
+        var s="";
+        while(i<=10)
+        {
+           s = num*i;
+           document.write(s + "<br>");
+           i++;
+        }
+     }
+    </script>
+
+    <input type="text" id="txtnum"  placeholder="Enter number"/>
+    <br><br>
+    <input type="button" value="Calculate" onclick="calctable()" />
+
+</body>
+</html>
