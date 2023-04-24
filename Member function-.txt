@@ -1,0 +1,128 @@
+Member function:-
+
+Javascript provide member function to define the object attribute.
+
+Type of Member function
+
+1)  based on memory allocation
+
+1.1)  class type or static
+
+1.2)  instance type or dynamic
+
+2) based on parameters
+
+2.1)  non parameter based function
+
+2.1.1)   with return type
+2.1.2)   without return type
+
+2.2)  parameter based function
+
+2.2.1)  with return type
+2.2.2)  without return type
+
+
+1.1)  class type or static:-
+
+it is used to define the static data member of the class and it will be called by classname.
+it used static modifier into method defination.
+
+class Classname
+{
+    static datamembername=undefined
+     static methodname()
+     {
+          Classname.datamembername=value
+          console.log(Classname.datamembername)
+     }
+
+}
+
+Classname.methodname();
+
+1.2)  instance type or dynamic:-
+
+it is used to define the dynamic data member of class and it will be called by object, we not represent any modifier under methodname.
+
+class Classname
+{
+      datamembername=undefined
+      methodname()
+      {
+           this.datamembername=value
+           console.log(this.datamembername)
+      }
+}
+
+const ref = new Classname()
+ref.methodname()
+
+
+based on parameter
+
+we can define argument based function to pass data from calling function.
+
+Without return type:- method not return any output
+class Classname
+{
+    methodname(x,y)
+    {
+         console.log(statement)
+    }
+}
+
+
+const ref = new Classname()
+ref.methodname(value1,value2)
+
+With Return Type:-
+
+We can define agrument based function that return result from called function.
+
+
+class Classname
+{
+     methodname(param)
+     {
+         return value
+     }
+
+}
+
+const ref = new Classname()
+var res = ref.methodname(paramvalue)
+console.log(res)
+
+
+Non parameters:-
+
+we can not pass any parameter, input variable will be defined inside method block.
+
+Without return type
+
+class Classname
+{
+     variable=undefiend
+     methodname()
+     {
+        variable=value;
+     }
+}
+
+
+With return type:-
+
+We can return output data from method block and received into calling program.
+
+class Classname
+{
+       methodname()
+       {
+            return value;
+       }
+}
+
+const ref = new Classname()
+result = ref.methodname()
+console.log(result)
