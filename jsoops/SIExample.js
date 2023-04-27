@@ -2,7 +2,7 @@ class SIExample
 {
     constructor(p,r,t)
     {
-        var p=p
+        this.p=p
         this.r=r
         this.t=t
     }
