@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Header from "./Header";
 
 function Swap()
 {
@@ -18,6 +19,7 @@ function Swap()
 
      }
      return(<div>
+         <Header />
         <form onSubmit={swapData}>
 
             <input type="text" ref={num1} placeholder="Enter First Number" /> 
