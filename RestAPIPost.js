@@ -6,47 +6,47 @@ export default class Restapipost extends React.Component
     constructor(props)
     {
         super(props);
-        this.state = {tdata:''}
+        this.state = {email:'',pwd:'',mobileno:'',fullname:'',statename:'',cityname:'',tdata:''}
+   
     }
-    componentDidMount() {
-        const config = {
-            headers: { Authorization: 'Bearer 902d19ec95276f806b79c2a34c72298f589b119b96dffc3f3b15effb1a604c49' }
-        };
+  
+    postData(e) {
+    
         
        
-      /*  fetch('https://gorest.co.in/public/v2/users',{
-         method: 'POST',
-         body: JSON.stringify({
-          name:'ravi kumar',
-          email:'ravikumar123@gmail.com',
-          gender:'male',
-          status:'inactive'
-      }),
-         headers:{"content-type":"application/json; charset=UTF-8",
-         "Authorization": 'Bearer 902d19ec95276f806b79c2a34c72298f589b119b96dffc3f3b15effb1a604c49'}  
-          }).then(res => res.json())
-
-    .then((data) => {
-
-       console.log(data)
-       this.setState({tdata:data})
-
-    }).catch(console.log)*/
-
-    axios.post("https://gorest.co.in/public/v2/users", {
-    name:'kamal kumar1',
-    email:'kamalkumar126@gmail.com',
-    gender:'male',
-    status:'inactive'},config).then((response) => {
+     
+    axios.post("https://shivaconceptdigital.com/api/reg.php", {
+      email:this.state.email,
+      pwd:this.state.pwd,
+      mobileno:this.state.mobileno,
+      fullname:this.state.fullname,
+      statename:this.state.statename,
+      cityname:this.state.cityname}).then((response) => {
         this.setState({tdata:response.data})
-        console.log(response.data)
+        //console.log(response.data)
     });
+    alert(this.state.email);
+    e.preventDefault()
    }
           
     render(){
         return(<div>
-            
-            <h1>{this.state.tdata.id}</h1>
+            <h1>Registration Form</h1>
+            <br /><br />
+           <input type="text" placeholder="Enter Email" onChange={(e)=>this.setState({email:e.target.value})} />
+           <br /><br />
+           <input type="text" placeholder="Enter Password" onChange={(e)=>this.setState({pwd:e.target.value})} />
+           <br /><br />
+           <input type="text" placeholder="Enter mobile" onChange={(e)=>this.setState({mobileno:e.target.value})} />
+           <br /><br />
+           <input type="text" placeholder="Enter fullname" onChange={(e)=>this.setState({fullname:e.target.value})} />
+           <br /><br />
+           <input type="text" placeholder="Enter statename" onChange={(e)=>this.setState({statename:e.target.value})} />
+           <br /><br />
+           <input type="text" placeholder="Enter cityname" onChange={(e)=>this.setState({cityname:e.target.value})} />
+           <br /><br />
+           <input type="button" value="Click" onClick={(e)=>this.postData(e)} />
+           {this.state.tdata.msg}
         </div>)
     }
 }
