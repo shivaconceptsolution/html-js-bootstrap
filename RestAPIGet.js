@@ -14,6 +14,11 @@ export default class RestAPIGet extends React.Component
                 this.setState({tdata:data})
                 console.log(this.state.tdata)
             }).catch(console.log)*/
+            var s = sessionStorage.getItem("uid")
+    if(s === null)
+    {
+       window.location='/login'
+    }
             axios.get('https://gorest.co.in/public/v2/users').then((res)=>{
                 this.setState({tdata:res.data})
             })
